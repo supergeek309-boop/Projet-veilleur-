@@ -2,83 +2,211 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Recrutement – Projet Veilleur</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Recrutement - Projet Veilleur</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-font-family: Arial;
-margin: 0;
-background: #111;
-color: #fff;
+font-family:Arial, sans-serif;
+background:#070707;
+color:white;
 }
 
 header{
-background: #000;
-padding: 30px;
-text-align: center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.8);
+position:sticky;
+top:0;
+backdrop-filter:blur(10px);
 }
 
-section{
-max-width: 900px;
-margin: auto;
-padding: 20px;
+.logo img{
+width:70px;
+height:70px;
+border-radius:50%;
+}
+
+.btn-retour{
+color:white;
+text-decoration:none;
+border:2px solid #9d5cff;
+padding:10px 18px;
+border-radius:8px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn-retour:hover{
+background:#9d5cff;
+}
+
+.hero{
+padding:100px 8%;
+text-align:center;
+background:linear-gradient(to bottom,#12091f,#070707);
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:15px;
+color:#b56dff;
+}
+
+.hero p{
+font-size:1.2rem;
+color:#d4d4d4;
+}
+
+.section{
+padding:80px 8%;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-background: #1c1c1c;
-padding: 15px;
-border-radius: 10px;
-margin-top: 15px;
+background:#121212;
+padding:30px;
+border-radius:20px;
+border:1px solid #252525;
+transition:0.3s;
 }
 
-.btn{
-display: inline-block;
-margin-top: 15px;
-padding: 12px 18px;
-background: white;
-color: black;
-text-decoration: none;
-border-radius: 6px;
+.card:hover{
+border-color:#9d5cff;
+transform:translateY(-5px);
 }
+
+.card h2{
+margin-bottom:15px;
+color:#b56dff;
+}
+
+.card p,
+.card li{
+color:#d0d0d0;
+line-height:1.6;
+}
+
+.card ul{
+padding-left:20px;
+margin-top:10px;
+}
+
+.contact{
+margin-top:40px;
+text-align:center;
+}
+
+.contact a{
+color:#b56dff;
+text-decoration:none;
+font-weight:bold;
+font-size:1.1rem;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:black;
+color:#888;
+}
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:2.8rem;
+}
+
+}
+
 </style>
-
 </head>
 
 <body>
 
 <header>
-<h1>Recrutement</h1>
-<p>Projet Veilleur</p>
 
-<a class="btn" href="index.html">Retour</a>
+<div class="logo">
+<img src="logo.webp" alt="Logo Projet Veilleur">
+</div>
+
+<a href="index.html" class="btn-retour">Retour</a>
+
 </header>
 
-<section>
+<section class="hero">
+
+<h1>Rejoindre le Projet Veilleur</h1>
+
+<p>
+Agir aujourd’hui, protéger demain.
+</p>
+
+</section>
+
+<section class="section">
+
+<div class="cards">
 
 <div class="card">
-<h2>Pourquoi rejoindre ?</h2>
+<h2>Pourquoi nous rejoindre ?</h2>
 <p>
-Le projet cherche des élèves motivés pour animer et faire vivre les activités.
+Participer à un projet concret et aider à sensibiliser les élèves au harcèlement scolaire.
 </p>
 </div>
 
 <div class="card">
-<h2>Missions</h2>
+<h2>Ce que tu peux faire</h2>
 <ul>
 <li>Animer les activités</li>
-<li>Expliquer aux élèves</li>
-<li>Participer aux sessions</li>
+<li>Aider les élèves</li>
+<li>Participer aux événements</li>
+<li>Faire vivre le projet</li>
 </ul>
 </div>
 
 <div class="card">
-<h2>Candidature</h2>
+<h2>Profil recherché</h2>
 <p>
-Message Instagram : <b>@le_projet_veilleur</b>
+Pas besoin d’être parfait.
+Juste motivé, respectueux et prêt à agir.
 </p>
 </div>
 
+</div>
+
+<div class="contact">
+
+<p>Instagram :</p>
+
+<br>
+
+<a href="https://instagram.com/le_projet_veilleur">
+@le_projet_veilleur
+</a>
+
+</div>
+
 </section>
+
+<footer>
+Projet Veilleur — Ensemble contre le harcèlement scolaire
+</footer>
 
 </body>
 </html>

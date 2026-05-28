@@ -2,110 +2,266 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Projet Veilleur</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-font-family: Arial;
-margin: 0;
-background: #f4f4f4;
-color: #111;
+font-family:Arial, sans-serif;
+background:#070707;
+color:white;
+overflow-x:hidden;
 }
 
 header{
-background: #111;
-color: white;
-padding: 30px;
-text-align: center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.8);
+position:sticky;
+top:0;
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
-section{
-max-width: 900px;
-margin: auto;
-padding: 20px;
-background: white;
-margin-top: 20px;
-border-radius: 10px;
+.logo img{
+width:70px;
+height:70px;
+border-radius:50%;
 }
 
-h2{
-border-left: 5px solid #111;
-padding-left: 10px;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:bold;
+transition:0.3s;
 }
 
-.box{
-background: #eee;
-padding: 15px;
-border-radius: 8px;
-margin-top: 10px;
+nav a:hover{
+color:#b56dff;
+}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 8%;
+min-height:90vh;
+gap:50px;
+}
+
+.hero-text{
+max-width:550px;
+}
+
+.hero-text h1{
+font-size:5rem;
+line-height:0.9;
+margin-bottom:20px;
+text-transform:uppercase;
+}
+
+.hero-text h1 span{
+color:#b56dff;
+}
+
+.hero-text p{
+font-size:1.1rem;
+line-height:1.7;
+color:#d4d4d4;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
 }
 
 .btn{
-display: inline-block;
-margin-top: 15px;
-padding: 12px 18px;
-background: #111;
-color: white;
-text-decoration: none;
-border-radius: 6px;
+padding:14px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
 }
-</style>
 
+.btn-purple{
+background:#9d5cff;
+color:white;
+}
+
+.btn-dark{
+border:2px solid #444;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.hero-image img{
+width:500px;
+max-width:100%;
+border-radius:20px;
+box-shadow:0 0 30px rgba(157,92,255,0.3);
+}
+
+.section{
+padding:80px 8%;
+}
+
+.section-title{
+font-size:2.5rem;
+margin-bottom:40px;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#121212;
+padding:25px;
+border-radius:20px;
+border:1px solid #252525;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#9d5cff;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#b56dff;
+}
+
+.card p{
+line-height:1.6;
+color:#cfcfcf;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:black;
+color:#888;
+margin-top:50px;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:3.5rem;
+}
+
+.buttons{
+justify-content:center;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-<h1>Projet Veilleur</h1>
-<p>Comprendre le harcèlement scolaire autrement</p>
 
-<a class="btn" href="recrutement.html">Recrutement</a>
+<div class="logo">
+<img src="logo.webp" alt="Logo Projet Veilleur">
+</div>
+
+<nav>
+<a href="#projet">Le Projet</a>
+<a href="#activites">Activités</a>
+<a href="recrutement.html">Recrutement</a>
+</nav>
+
 </header>
 
-<section>
-<h2>Pourquoi ce projet ?</h2>
+<section class="hero" id="projet">
+
+<div class="hero-text">
+
+<h1>Projet <span>Veilleur</span></h1>
+
 <p>
-Le harcèlement scolaire ne se limite pas aux insultes ou aux violences visibles.
-Il repose aussi sur les silences, les regards et les inactions.
+Comprendre. Agir. Protéger.
+<br><br>
+Le Projet Veilleur sensibilise les élèves au harcèlement scolaire grâce à des activités interactives et humaines.
 </p>
-</section>
 
-<section>
-<h2>Activité 1 – Acceptable / Inacceptable</h2>
-
-<div class="box">
-Exemples :
-<ul>
-<li>Intégrer un élève seul dans un groupe</li>
-<li>Filmer une humiliation et la publier</li>
-<li>Rester silencieux face à une situation</li>
-</ul>
+<div class="buttons">
+<a href="#activites" class="btn btn-purple">Découvrir</a>
+<a href="recrutement.html" class="btn btn-dark">Recrutement</a>
 </div>
 
-<p>Objectif : réfléchir aux comportements du quotidien.</p>
-</section>
-
-<section>
-<h2>Activité 2 – Le poids des mots</h2>
-
-<div class="box">
-<ul>
-<li>Humiliation = +5 kg</li>
-<li>Menaces = +5 kg</li>
-<li>Soutien = -5 kg</li>
-</ul>
 </div>
 
-<p>Les choix des élèves modifient l’état du personnage.</p>
+<div class="hero-image">
+<img src="logo.webp" alt="Logo">
+</div>
+
 </section>
 
-<section>
-<h2>Message du projet</h2>
+<section class="section" id="activites">
+
+<h2 class="section-title">Nos Activités</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Acceptable / Inacceptable</h3>
 <p>
-Le harcèlement survit grâce aux silences.
-Changer ça commence à petite échelle.
+Les élèves jugent différentes situations du quotidien scolaire afin de réfléchir aux comportements normalisés.
 </p>
+</div>
+
+<div class="card">
+<h3>Le poids des mots</h3>
+<p>
+Les humiliations écrasent progressivement le personnage pendant que les soutiens l’aident à tenir.
+</p>
+</div>
+
+<div class="card">
+<h3>Questionnaires anonymes</h3>
+<p>
+Des sondages permettent aux élèves d’exprimer anonymement leur ressenti.
+</p>
+</div>
+
+</div>
+
 </section>
+
+<footer>
+Projet Veilleur — Ensemble contre le harcèlement scolaire
+</footer>
 
 </body>
 </html>
